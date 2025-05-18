@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+:root {
+  --primary-color: #ff6f61;
+  --secondary-color: #d1423d;
+  --background-color: var(--mui-palette-background-default);
+  --section-bg: #2a2a2a;
+  --mobile-breakpoint: 768px;
+  --navbar-height: 64px;
+  --text-color: var(--mui-palette-text-primary);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: var(--navbar-height); /* Keep padding for fixed navbar */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height); 
+}
+
+
+/* Styling for the divs acting as sections */
+#home, #education, #projects, #skills, #contact {
+  min-height: 100vh; /* Ensure sections take full viewport height */
+  padding: 2rem; 
+  box-sizing: border-box;
+}
+
+
+/* Ensuring navbar stays on top*/
+.MuiAppBar-root {
+  z-index: 9999 !important;
+}
+
+
+/* Custom scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #ff6f61;
+  border-radius: 4px;
+}
+
+/* Keyframes for Footer Animation */
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

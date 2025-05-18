@@ -1,0 +1,20 @@
+.sideNav {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.drawerPaper {
+  width: 240px;
+  margin-top: 64px;
+  background-color: #f5f5f5;
+}
+
+.navList {
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .drawerPaper {
+    margin-top: 56px;
+  }
+}
